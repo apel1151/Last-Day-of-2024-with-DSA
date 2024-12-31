@@ -1,7 +1,7 @@
 # DSA-
 Overview of Datastructure and Algorithm
 
-31-12-2024 >> 
+31-12-2024 >> Today's exercise
 
 const groceryList = ["Bread", "Meat", "Milk", "Oil", "Rice", "Sauce", "Sugar"].sort(); // Sorted list
 
