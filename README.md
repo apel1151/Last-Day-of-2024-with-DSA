@@ -131,3 +131,123 @@ const newArray = new customArray();
 
 newArray.push(10); // Adds 10 to the custom array
 console.log(`Present array is ${JSON.stringify(newArray.data)} and length is ${newArray.length}`); // Outputs the updated array
+
+
+newArray.push(10); // Adds 10 to the custom array
+newArray.push(20);
+newArray.push(30);
+newArray.push(40);
+
+
+newArray.pop()
+newArray.pop()
+newArray.pop()
+newArray.pop()
+newArray.pop()
+newArray.push(10)
+console.log(`Present array is ${JSON.stringify(newArray.data)} and length is ${newArray.length}`); // Outputs the updated array
+
+
+
+
+
+
+
+/ Delete an element by index
+    deleteByIndex(index) {
+        if (index >= 0 && index < this.length) {
+            const deletedElement = this.data[index];
+            // Shift elements to the left from the deleted index
+            for (let i = index; i < this.length - 1; i++) {
+                this.data[i] = this.data[i + 1];
+            }
+            delete this.data[this.length - 1]; // Remove the last (now duplicate) element
+            this.length--; // Update length
+            return deletedElement; // Return the deleted element
+        }
+        return undefined; // Return undefined for invalid index
+    }
+}
+
+
+const myArray = [10,20,30.40];
+
+
+
+const reverseString = (str) =>{
+    const arr = str.split("")
+    const reverseArray = arr.reverse();
+    const newArr = reverseArray.join("")
+    return newArr
+    
+}
+    console.log(reverseString("Hello"));
+    
+
+const reverseString = (str) =>{
+    const newArray = str.split("").reverse().join("")
+    return newArray;
+}
+console.log(reverseString("Apel Mahmud"));
+
+
+const reverseString = (str) =>{
+    let reversed = ""
+    for(i=str.length -1; i>=0; i--){
+        reversed += str[i];
+    }
+    return reversed;
+}
+
+console.log(reverseString("Hello"));
+
+
+const reverseInt = (n) =>{
+    const reversed = n.toString().split("").reverse().join("");
+    return parseInt(reversed);
+}
+
+console.log(reverseInt(-123))
+
+
+
+const capitalizeString = (str) =>{
+    const words = str.split(" ");
+    let result = "";
+    for(i=0; i<words.length; i++){
+        const capitalizedWord = words[i].charAt(0).toUpperCase()+words[i].slice(1);
+        result += capitalizedWord + " ";
+        // if(i < words.length -1){
+        //     result += " ";
+        // }
+    }
+    return result;
+    
+}
+
+console.log(capitalizeString("hello world "));
+
+
+const capitalizeString = (str) =>{
+
+    return str
+          .toLowerCase()
+          .split(" ")
+          .map((word) =>{
+            return word[0].toUpperCase() + word.slice(1);
+             
+          })
+          .join(" ");
+    
+}
+
+console.log(capitalizeString("hello world"))
+
+
+
+
+
+
+
+
+
