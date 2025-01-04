@@ -62,3 +62,41 @@ const twoSum = (numbers, target) => {
 };
 
 twoSum([2, 7, 11, 15], 9); // Example usage
+
+
+
+
+##########################
+
+const twoSum = (numbers, target) => {
+    const numIndices = new Map();
+
+    for (let i = 0; i < numbers.length; i++) {
+        const complement = target - numbers[i];
+
+        if (numIndices.has(complement)) {
+            const index1 = numIndices.get(complement);
+            const index2 = i;
+            console.log(`Indices: ${index1}, ${index2}`);
+            console.log(`Elements: ${numbers[index1]}, ${numbers[index2]}`);
+            return; // Exit the function after printing
+        }
+
+        numIndices.set(numbers[i], i);
+    }
+
+    console.log("No solution found");
+};
+
+// Example usage:
+twoSum([2, 7, 11, 15], 9);
+
+
+
+
+
+
+
+
+
+
